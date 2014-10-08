@@ -8,9 +8,9 @@
     } else {
         root.StackGenerator = factory(root.StackFrame);
     }
-}(this, function () {
-    return function StackGenerator() {
-        this.backtrace = function backtrace(opts) {
+}(this, function (StackFrame) {
+    return {
+        backtrace: function backtrace(opts) {
             var stack = [];
             var maxStackSize = 10;
 
@@ -33,6 +33,6 @@
                 }
             }
             return stack;
-        };
+        }
     };
 }));

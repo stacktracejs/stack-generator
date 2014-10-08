@@ -1,15 +1,13 @@
 /* global StackFrame: false, StackGenerator: false */
 describe('StackGenerator', function () {
     describe('#backtrace', function () {
-        var unit = new StackGenerator();
-
         it('should generate backtrace for function declarations', function () {
             var stackFrames = undefined;
             function foo() {
                 bar();
             }
             function bar() {
-                stackFrames = unit.backtrace();
+                stackFrames = StackGenerator.backtrace();
             }
             foo();
 
@@ -25,7 +23,7 @@ describe('StackGenerator', function () {
                 bar();
             };
             var bar = function bar() {
-                stackFrames = unit.backtrace();
+                stackFrames = StackGenerator.backtrace();
             };
             foo();
 
@@ -41,7 +39,7 @@ describe('StackGenerator', function () {
                 bar();
             };
             var bar = function bar() {
-                stackFrames = unit.backtrace({maxStackSize: 2});
+                stackFrames = StackGenerator.backtrace({maxStackSize: 2});
             };
             foo();
 
