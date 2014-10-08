@@ -1,4 +1,3 @@
-stack-generator
+stack-generator.js
 ===============
 
-Generate StackFrames when you can't get them from conventional methods
