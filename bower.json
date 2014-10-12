@@ -4,15 +4,11 @@
     "main": "./stack-generator.js",
     "homepage": "https://github.com/stacktracejs/stack-generator.js",
     "authors": [
-        "Eric Wendelin <me@eriwen.com>"
+        "Eric Wendelin <me@eriwen.com> (http://www.eriwen.com)"
     ],
     "description": "Generate artificial backtrace by walking arguments.callee.caller chain",
     "dependencies": {
         "stackframe": "~0.1.0"
-    },
-    "devDependencies": {
-        "jasmine": "~1.3.1",
-        "jasmine-jstd-adapter": "~1.1.2"
     },
     "moduleType": [
         "amd",
@@ -25,7 +21,8 @@
         "backtrace",
         "cross-browser",
         "framework-agnostic",
-        "error"
+        "error",
+        "debugger"
     ],
     "license": "Public Domain",
     "ignore": [

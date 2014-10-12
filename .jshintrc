@@ -1,7 +1,6 @@
 {
     "nonew": true,
     "curly": true,
-    "noarg": true,
     "trailing": true,
     "forin": true,
     "noempty": true,
