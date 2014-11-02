@@ -4,6 +4,13 @@ stack-generator
 
 Generate artificial backtrace by walking arguments.callee.caller chain
 
+## Usage
+```
+StackGenerator.backtrace()
+
+=> [StackFrame('funName1', []), StackFrame(..), StackFrame(..)]
+```
+
 ## Installation
 ```
 npm install stack-generator
