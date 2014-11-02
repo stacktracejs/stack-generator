@@ -5,7 +5,7 @@ describe('StackGenerator', function () {
         it('should generate backtrace for function declarations', function () {
             var stackFrames = null;
             function foo() {
-                bar();
+                bar('arg1', 42);
             }
             function bar() {
                 stackFrames = StackGenerator.backtrace();
@@ -13,9 +13,9 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['backtrace', undefined, undefined, undefined, undefined]);
-            expect(stackFrames[1]).toMatchStackFrame(['bar', undefined, undefined, undefined, undefined]);
-            expect(stackFrames[2]).toMatchStackFrame(['foo', undefined, undefined, undefined, undefined]);
+            expect(stackFrames[0]).toMatchStackFrame(['backtrace', [], undefined, undefined, undefined]);
+            expect(stackFrames[1]).toMatchStackFrame(['bar', ['arg1', 42], undefined, undefined, undefined]);
+            expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
         });
 
         it('should generate backtrace for named function expressions', function () {
@@ -29,9 +29,9 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['backtrace', undefined, undefined, undefined, undefined]);
-            expect(stackFrames[1]).toMatchStackFrame(['bar', undefined, undefined, undefined, undefined]);
-            expect(stackFrames[2]).toMatchStackFrame(['foo', undefined, undefined, undefined, undefined]);
+            expect(stackFrames[0]).toMatchStackFrame(['backtrace', [], undefined, undefined, undefined]);
+            expect(stackFrames[1]).toMatchStackFrame(['bar', [], undefined, undefined, undefined]);
+            expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
         });
 
         it('should limit stack size given a max stack size', function () {
