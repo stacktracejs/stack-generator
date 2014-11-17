@@ -1,6 +1,6 @@
 {
     "name": "stack-generator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "./stack-generator.js",
     "homepage": "https://github.com/stacktracejs/stack-generator.js",
     "authors": [
