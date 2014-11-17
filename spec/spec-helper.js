@@ -1,12 +1,14 @@
-beforeEach(function () {
-    if (!Array.isArray) {
-        Array.isArray = function (arg) {
-            return Object.prototype.toString.call(arg) === '[object Array]';
-        };
-    }
+// Polyfill for old browsers
+// See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+if (!Array.isArray) {
+    Array.isArray = function(arg) {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+    };
+}
 
+beforeEach(function() {
     this.addMatchers({
-        toMatchStackFrame: function (expected) {
+        toMatchStackFrame: function(expected) {
             var actual = this.actual;
             var message = '';
             if (actual.getFunctionName() !== expected[0]) {
@@ -28,9 +30,7 @@ beforeEach(function () {
             if (actual.getColumnNumber() !== expected[4]) {
                 message += 'expected columnNumber: ' + actual.getColumnNumber() + ' to equal ' + expected[4] + '\n';
             }
-            this.message = function () {
-                return message
-            };
+            this.message = function() { return message };
             return message === '';
         }
     });
