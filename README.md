@@ -15,6 +15,5 @@ StackGenerator.backtrace()
 ```
 npm install stack-generator
 bower install stack-generator
-component install stack-generator
-https://raw.githubusercontent.com/stacktracejs/stack-generator/master/stack-generator.js
+https://raw.githubusercontent.com/stacktracejs/stack-generator/master/dist/stack-generator.min.js
 ```

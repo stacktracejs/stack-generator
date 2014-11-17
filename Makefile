@@ -1,25 +1,26 @@
-BROWSERS=Firefox,ChromeCanary,Opera,Safari,PhantomJS
+BROWSERS=Firefox,ChromeCanary,Opera,Safari
 
-test:
-	@$(MAKE) lint
+test: build/jshint.xml
 	@NODE_ENV=test ./node_modules/karma/bin/karma start --single-run --browsers $(BROWSERS)
 
-lint:
-	./node_modules/.bin/jshint ./spec/stack-generator-spec.js ./stack-generator.js
+build/jshint.xml: build
+	./node_modules/.bin/jshint --reporter checkstyle ./spec/stack-generator-spec.js ./stack-generator.js > build/jshint.xml
 
-test-ci:
-	$(MAKE) lint
+test-ci: build/jshint.xml
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.ci.js --single-run && \
-		cat ./coverage/Chrome*/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose
-
-build: components
-	@component build --dev
-
-components: component.json
-	@component install --dev
+    		cat ./coverage/Chrome*/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose
 
 clean:
-	rm -fr build coverage components template.js *.log
+	rm -fr build coverage dist *.log
 
-.PHONY: clean test
+build:
+	mkdir build
+
+dist:
+	mkdir dist
+	./node_modules/.bin/uglifyjs2 \
+		stack-generator.js -o stack-generator.min.js --source-map stack-generator.js.map
+	mv stack-generator.min.js stack-generator.js.map dist/
+
+.PHONY: clean test dist

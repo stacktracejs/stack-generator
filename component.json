@@ -1,8 +1,0 @@
-{
-    "name": "stack-generator",
-    "version": "0.1.0",
-    "main": "./stack-generator.js",
-    "dependencies": {
-        "stackframe": "~0.1.0"
-    }
-}
