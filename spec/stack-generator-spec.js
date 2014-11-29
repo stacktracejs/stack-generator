@@ -13,7 +13,7 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['backtrace', [], undefined, undefined, undefined]);
+            expect(stackFrames[0]).toMatchStackFrame(['StackGenerator$$backtrace', [], undefined, undefined, undefined]);
             expect(stackFrames[1]).toMatchStackFrame(['bar', ['arg1', 42], undefined, undefined, undefined]);
             expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
         });
@@ -29,7 +29,7 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['backtrace', [], undefined, undefined, undefined]);
+            expect(stackFrames[0]).toMatchStackFrame(['StackGenerator$$backtrace', [], undefined, undefined, undefined]);
             expect(stackFrames[1]).toMatchStackFrame(['bar', [], undefined, undefined, undefined]);
             expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
         });
@@ -56,7 +56,7 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0].functionName).toBe('backtrace');
+            expect(stackFrames[0].functionName).toBe('StackGenerator$$backtrace');
         });
 
         it('should stop and not throw error when entering a strict-mode context', function() {
@@ -79,7 +79,7 @@ describe('StackGenerator', function () {
             if (_isStrictMode()) {
                 expect(stackFrames.length).toBe(1);
             }
-            expect(stackFrames[0].functionName).toBe('backtrace');
+            expect(stackFrames[0].functionName).toBe('StackGenerator$$backtrace');
         });
     });
 });
