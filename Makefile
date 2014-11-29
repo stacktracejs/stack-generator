@@ -22,5 +22,6 @@ dist:
 	./node_modules/.bin/uglifyjs2 \
 		stack-generator.js -o stack-generator.min.js --source-map stack-generator.js.map
 	mv stack-generator.min.js stack-generator.js.map dist/
+	cp stack-generator.js dist/
 
 .PHONY: clean test dist
