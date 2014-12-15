@@ -21,7 +21,7 @@
             var curr = arguments.callee;
             while (curr && stack.length < maxStackSize) {
                 var args = [].slice.call(curr['arguments']);
-                if (/function(?:\s+([\w$]+))?\s*\(/.test(curr.toString())) {
+                if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
                     stack.push(new StackFrame(RegExp.$1 || undefined, args));
                 } else {
                     stack.push(new StackFrame(undefined, args));

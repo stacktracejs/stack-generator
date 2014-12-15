@@ -71,7 +71,7 @@ describe('StackGenerator', function () {
                 bar();
             };
             var bar = function bar() {
-                stackFrames = StackGenerator.backtrace();
+                stackFrames = StackGenerator.backtrace({maxStackSize: 25});
             };
             foo();
 
