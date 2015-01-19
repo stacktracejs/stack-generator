@@ -61,11 +61,35 @@ module.exports = function (config) {
             platform: 'Windows 8.1',
             version: '11'
         }
+        //slIE10: {
+        //    base: 'SauceLabs',
+        //    browserName: 'internet explorer',
+        //    platform: 'Windows 8',
+        //    version: '10'
+        //},
+        //slIE9: {
+        //    base: 'SauceLabs',
+        //    browserName: 'internet explorer',
+        //    platform: 'Windows 7',
+        //    version: '9'
+        //}
+        //slIE8: {
+        //    base: 'SauceLabs',
+        //    browserName: 'internet explorer',
+        //    platform: 'Windows XP',
+        //    version: '8'
+        //}
         //slIE7: {
         //    base: 'SauceLabs',
         //    browserName: 'internet explorer',
         //    platform: 'Windows XP',
         //    version: '7'
+        //}
+        //slIE6: {
+        //    base: 'SauceLabs',
+        //    browserName: 'internet explorer',
+        //    platform: 'Windows XP',
+        //    version: '6'
         //}
     };
 
