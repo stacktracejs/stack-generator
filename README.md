@@ -18,7 +18,9 @@ bower install stack-generator
 https://raw.githubusercontent.com/stacktracejs/stack-generator/master/dist/stack-generator.min.js
 ```
 
-## Browser Support (See [Karma Config](karma.conf.ci.js) for list of browsers tested by CI)
+## Browser Support
+*(See [Karma Config](karma.conf.ci.js) for list of browsers tested by CI)*
+
  * Chrome 1+
  * Firefox 3+
  * Safari 6+
