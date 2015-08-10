@@ -1,6 +1,8 @@
 (function (root, factory) {
     'use strict';
     // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js, Rhino, and browsers.
+
+    /* istanbul ignore next */
     if (typeof define === 'function' && define.amd) {
         define('stack-generator', ['stackframe'], factory);
     } else if (typeof exports === 'object') {
@@ -21,7 +23,7 @@
             var curr = arguments.callee;
             while (curr && stack.length < maxStackSize) {
                 var args = [].slice.call(curr['arguments']);
-                if (/function(?:\s+([\w$]+))?\s*\(/.test(curr.toString())) {
+                if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
                     stack.push(new StackFrame(RegExp.$1 || undefined, args));
                 } else {
                     stack.push(new StackFrame(undefined, args));

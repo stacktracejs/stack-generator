@@ -3,7 +3,7 @@ module.exports = function (config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
-            'node_modules/stackframe/stackframe.js',
+            'node_modules/stackframe/dist/stackframe.js',
             'stack-generator.js',
             'spec/spec-helper.js',
             'spec/*-spec.js'
@@ -21,7 +21,8 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Firefox', 'ChromeCanary', 'Opera', 'Safari', 'PhantomJS'],
+        //browsers: ['Firefox', 'ChromeCanary', 'Opera', 'Safari'],
+        browsers: ['PhantomJS2'],
         singleRun: false
     });
 };

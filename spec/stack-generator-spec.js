@@ -1,5 +1,3 @@
-/* global StackFrame: false, StackGenerator: false */
-/* jshint evil: true */
 describe('StackGenerator', function () {
     describe('#backtrace', function () {
         it('should generate backtrace for function declarations', function () {

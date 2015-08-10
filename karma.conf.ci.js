@@ -97,8 +97,8 @@ module.exports = function (config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
-            'node_modules/stackframe/stackframe.js',
-            'stack-generator.js',
+            'node_modules/stackframe/dist/stackframe.js',
+            'dist/stack-generator.js',
             'spec/spec-helper.js',
             'spec/*-spec.js'
         ],
