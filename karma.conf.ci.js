@@ -98,7 +98,7 @@ module.exports = function (config) {
         frameworks: ['jasmine'],
         files: [
             'node_modules/stackframe/dist/stackframe.js',
-            'dist/stack-generator.js',
+            'stack-generator.js',
             'spec/spec-helper.js',
             'spec/*-spec.js'
         ],

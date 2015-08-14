@@ -3,7 +3,8 @@
     "description": "Generate artificial backtrace by walking arguments.callee.caller chain",
     "maintainers": [
         "Eric Wendelin <me@eriwen.com> (http://www.eriwen.com)",
-        "Victor Homyakov <vkhomyackov@gmail.com> (https://github.com/victor-homyakov)"
+        "Victor Homyakov <vkhomyackov@gmail.com> (https://github.com/victor-homyakov)",
+        "Oliver Salzburg (https://github.com/oliversalzburg)"
     ],
     "version": "1.0.5",
     "license": "SEE LICENSE IN LICENSE",
@@ -44,14 +45,8 @@
     "bugs": {
         "url": "https://github.com/stacktracejs/stack-generator/issues"
     },
-    "licenses": [
-        {
-            "type": "Public Domain",
-            "url": "https://github.com/stacktracejs/stack-generator/blob/master/LICENSE"
-        }
-    ],
     "main": "./stack-generator.js",
     "scripts": {
-        "test": "gulp clean test"
+        "test": "gulp test"
     }
 }
