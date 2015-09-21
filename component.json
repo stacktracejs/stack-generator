@@ -12,6 +12,6 @@
         "stack-generator.js"
     ],
     "dependencies": {
-        "stacktracejs/stackframe": "0.3.0"
+        "stacktracejs/stackframe": "0.3.1"
     }
 }
