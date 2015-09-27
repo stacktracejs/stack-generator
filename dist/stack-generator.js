@@ -22,7 +22,11 @@
 
             var curr = arguments.callee;
             while (curr && stack.length < maxStackSize) {
-                var args = [].slice.call(curr['arguments']);
+                // Allow V8 optimizations
+                var args = new Array(curr['arguments'].length);
+                for(var i = 0; i < args.length; ++i) {
+                    args[i] = curr['arguments'][i];
+                }
                 if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
                     stack.push(new StackFrame(RegExp.$1 || undefined, args));
                 } else {
