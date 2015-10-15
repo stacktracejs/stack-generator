@@ -1,6 +1,6 @@
 {
     "name": "stack-generator",
-    "main": "./stack-generator.js",
+    "main": "./dist/stack-generator.js",
     "homepage": "https://github.com/stacktracejs/stack-generator.js",
     "authors": [
         "Eric Wendelin <me@eriwen.com> (http://www.eriwen.com)",
