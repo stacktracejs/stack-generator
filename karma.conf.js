@@ -8,19 +8,11 @@ module.exports = function (config) {
             'spec/spec-helper.js',
             'spec/*-spec.js'
         ],
-        reporters: ['progress', 'coverage'],
-        preprocessors: {
-            'stack-generator.js': 'coverage'
-        },
-        coverageReporter: {
-            type: 'lcov',
-            dir: 'coverage'
-        },
+        reporters: ['progress'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         //browsers: ['Firefox', 'ChromeCanary', 'Opera', 'Safari'],
         browsers: ['PhantomJS2'],
         singleRun: false
