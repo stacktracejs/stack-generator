@@ -8,7 +8,7 @@ Generate artificial backtrace by walking arguments.callee.caller chain. **Works 
 ```
 StackGenerator.backtrace()
 
-=> [StackFrame('funName1', []), StackFrame(..), StackFrame(..)]
+=> [StackFrame({functionName: 'foo', args: []}), StackFrame(..), StackFrame(..)]
 ```
 
 ## Installation
@@ -19,15 +19,7 @@ https://raw.githubusercontent.com/stacktracejs/stack-generator/master/dist/stack
 ```
 
 ## Browser Support
-*(See [Karma Config](karma.conf.ci.js) for list of browsers tested by CI)*
-
- * Chrome 1+
- * Firefox 3+
- * Safari 6+
- * Opera 9+
- * IE 6+
- * iOS 6+
- * Android 4.0+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/stacktracejs.svg)](https://saucelabs.com/u/stacktracejs)
 
 ## Contributing
 Want to be listed as a *Contributor*? Start with the [Contributing Guide](CONTRIBUTING.md)!
