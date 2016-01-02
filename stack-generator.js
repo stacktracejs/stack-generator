@@ -28,9 +28,9 @@
                     args[i] = curr['arguments'][i];
                 }
                 if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
-                    stack.push(new StackFrame(RegExp.$1 || undefined, args));
+                    stack.push(new StackFrame({functionName: RegExp.$1 || undefined, args: args}));
                 } else {
-                    stack.push(new StackFrame(undefined, args));
+                    stack.push(new StackFrame({args: args}));
                 }
 
                 try {

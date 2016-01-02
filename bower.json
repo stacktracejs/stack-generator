@@ -8,7 +8,7 @@
     ],
     "description": "Generate artificial backtrace by walking arguments.callee.caller chain",
     "dependencies": {
-        "stackframe": "~0.3.1"
+        "stackframe": "~1.0.2"
     },
     "moduleType": [
         "amd",
