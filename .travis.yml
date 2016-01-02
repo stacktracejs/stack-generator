@@ -1,12 +1,18 @@
 language: node_js
-node_js:
-- '0.12'
-script: gulp ci
-install:
-- npm install
 sudo: false
+node_js: stable
 addons:
   sauce_connect: true
+  firefox: latest
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+before_script:
+- npm install
+script:
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then gulp ci; else gulp pr; fi
 env:
   global:
     - secure: khV7nMQEHsPUMAo2iUh42pUc/aktwlc+QpE/B4BHSh2fCjbtfPHdfYMNpgJwbil9JPhKtJs7h+5kPRVcy55MHrCc1JURLU31vcORSo/kxZMfSUGFYWp0eFcS3ekwxYkpBNKSQ6vMzTxxIQF3ZJzT+m3aG+1NPeQ2+6iycG0xiJs=
