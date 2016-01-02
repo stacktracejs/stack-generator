@@ -11,9 +11,12 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['StackGenerator$$backtrace', [], undefined, undefined, undefined]);
-            expect(stackFrames[1]).toMatchStackFrame(['bar', ['arg1', 42], undefined, undefined, undefined]);
-            expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
+            expect(stackFrames[0].functionName).toBe('StackGenerator$$backtrace');
+            expect(stackFrames[0].args).toEqual([]);
+            expect(stackFrames[1].functionName).toBe('bar');
+            expect(stackFrames[1].args).toEqual(['arg1', 42]);
+            expect(stackFrames[2].functionName).toBe('foo');
+            expect(stackFrames[2].args).toEqual([]);
         });
 
         it('should generate backtrace for named function expressions', function () {
@@ -27,9 +30,12 @@ describe('StackGenerator', function () {
             foo();
 
             expect(stackFrames).toBeTruthy();
-            expect(stackFrames[0]).toMatchStackFrame(['StackGenerator$$backtrace', [], undefined, undefined, undefined]);
-            expect(stackFrames[1]).toMatchStackFrame(['bar', [], undefined, undefined, undefined]);
-            expect(stackFrames[2]).toMatchStackFrame(['foo', [], undefined, undefined, undefined]);
+            expect(stackFrames[0].functionName).toBe('StackGenerator$$backtrace');
+            expect(stackFrames[0].args).toEqual([]);
+            expect(stackFrames[1].functionName).toBe('bar');
+            expect(stackFrames[1].args).toEqual([]);
+            expect(stackFrames[2].functionName).toBe('foo');
+            expect(stackFrames[2].args).toEqual([]);
         });
 
         it('should limit stack size given a max stack size', function () {

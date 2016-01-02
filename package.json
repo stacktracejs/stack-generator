@@ -6,7 +6,7 @@
         "Victor Homyakov <vkhomyackov@gmail.com> (https://github.com/victor-homyakov)",
         "Oliver Salzburg (https://github.com/oliversalzburg)"
     ],
-    "version": "1.0.7",
+    "version": "1.1.0",
     "license": "Unlicense",
     "keywords": [
         "stacktrace",
@@ -18,7 +18,7 @@
         "url": "git://github.com/stacktracejs/stack-generator.git"
     },
     "dependencies": {
-        "stackframe": "^0.3.1"
+        "stackframe": "^1.0.2"
     },
     "devDependencies": {
         "colors": "^1.1.2",
@@ -43,6 +43,7 @@
         "karma-phantomjs2-launcher": "^0.4.0",
         "karma-safari-launcher": "^0.1.1",
         "karma-sauce-launcher": "^0.2.14",
+        "karma-spec-reporter": "0.0.23",
         "run-sequence": "^1.1.5"
     },
     "bugs": {
