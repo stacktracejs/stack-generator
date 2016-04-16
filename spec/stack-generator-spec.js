@@ -1,13 +1,16 @@
-describe('StackGenerator', function () {
-    describe('#backtrace', function () {
-        it('should generate backtrace for function declarations', function () {
+describe('StackGenerator', function() {
+    describe('#backtrace', function() {
+        it('should generate backtrace for function declarations', function() {
             var stackFrames = null;
+
             function foo() {
                 bar('arg1', 42);
             }
+
             function bar() {
                 stackFrames = StackGenerator.backtrace();
             }
+
             foo();
 
             expect(stackFrames).toBeTruthy();
@@ -19,7 +22,7 @@ describe('StackGenerator', function () {
             expect(stackFrames[2].args).toEqual([]);
         });
 
-        it('should generate backtrace for named function expressions', function () {
+        it('should generate backtrace for named function expressions', function() {
             var stackFrames = null;
             var foo = function foo() {
                 bar();
@@ -38,12 +41,12 @@ describe('StackGenerator', function () {
             expect(stackFrames[2].args).toEqual([]);
         });
 
-        it('should limit stack size given a max stack size', function () {
+        it('should limit stack size given a max stack size', function() {
             var stackFrames = null;
             var foo = function foo() {
                 bar();
             };
-            var bar = function () {
+            var bar = function() {
                 stackFrames = StackGenerator.backtrace({maxStackSize: 2});
             };
             foo();
@@ -55,7 +58,7 @@ describe('StackGenerator', function () {
         it('should stop and not throw error when encountering a call to eval', function() {
             var stackFrames = null;
             var foo = function foo() {
-                eval("stackFrames = StackGenerator.backtrace({maxStackSize: 2});");
+                eval('stackFrames = StackGenerator.backtrace({maxStackSize: 2});');
             };
             foo();
 
@@ -67,11 +70,11 @@ describe('StackGenerator', function () {
             'use strict';
 
             function _isStrictMode() {
-                return (eval("var __temp = null"), (typeof __temp === "undefined"));
+                return (eval('var __temp = null'), (typeof __temp === 'undefined'));
             }
 
             var stackFrames = null;
-            var foo = function () {
+            var foo = function() {
                 bar();
             };
             var bar = function bar() {

@@ -1,4 +1,4 @@
-(function (root, factory) {
+(function(root, factory) {
     'use strict';
     // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js, Rhino, and browsers.
 
@@ -10,7 +10,7 @@
     } else {
         root.StackGenerator = factory(root.StackFrame);
     }
-}(this, function (StackFrame) {
+}(this, function(StackFrame) {
     return {
         backtrace: function StackGenerator$$backtrace(opts) {
             var stack = [];
@@ -24,7 +24,7 @@
             while (curr && stack.length < maxStackSize) {
                 // Allow V8 optimizations
                 var args = new Array(curr['arguments'].length);
-                for(var i = 0; i < args.length; ++i) {
+                for (var i = 0; i < args.length; ++i) {
                     args[i] = curr['arguments'][i];
                 }
                 if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
