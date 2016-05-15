@@ -1,6 +1,6 @@
 stack-generator
 ===============
-[![Build Status](https://travis-ci.org/stacktracejs/stack-generator.svg?branch=master)](https://travis-ci.org/stacktracejs/stack-generator) [![Coverage Status](https://img.shields.io/coveralls/stacktracejs/stack-generator.svg)](https://coveralls.io/r/stacktracejs/stack-generator) [![Code Climate](https://codeclimate.com/github/stacktracejs/stack-generator/badges/gpa.svg)](https://codeclimate.com/github/stacktracejs/stack-generator)
+[![Build Status](https://travis-ci.org/stacktracejs/stack-generator.svg?branch=master)](https://travis-ci.org/stacktracejs/stack-generator) [![Coverage Status](https://img.shields.io/coveralls/stacktracejs/stack-generator.svg)](https://coveralls.io/r/stacktracejs/stack-generator) [![GitHub license](https://img.shields.io/github/license/stacktracejs/stack-generator.svg)](http://unlicense.org)
 
 Generate artificial backtrace by walking arguments.callee.caller chain. **Works everywhere except strict-mode**.
 
