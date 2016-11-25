@@ -1,3 +1,6 @@
+## v2.0.0
+* Upgrade `stackframe` dependency to 1.x. Stackframes are constructed and accessed differently. See the [stackframe CHANGELOG](https://github.com/stacktracejs/stackframe/blob/master/CHANGELOG.md#v10x) for details.
+
 ## v1.0.3
 * Fix edge case when parsing arguments with Firefox
 
