@@ -2,7 +2,7 @@
     "name": "stack-generator",
     "repository": "stacktracejs/stack-generator",
     "description": "Generate artificial backtrace by walking arguments.callee.caller chain",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "keywords": [
         "stacktrace",
         "error"
