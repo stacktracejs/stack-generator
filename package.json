@@ -2,12 +2,12 @@
   "name": "stack-generator",
   "description": "Generate artificial backtrace by walking arguments.callee.caller chain",
   "maintainers": [
-    "Eric Wendelin <me@eriwen.com> (http://www.eriwen.com)",
+    "Eric Wendelin <me@eriwen.com> (https://www.eriwen.com)",
     "Victor Homyakov <vkhomyackov@gmail.com> (https://github.com/victor-homyakov)",
     "Oliver Salzburg (https://github.com/oliversalzburg)"
   ],
-  "version": "2.0.0",
-  "license": "Unlicense",
+  "version": "2.0.1",
+  "license": "MIT",
   "keywords": [
     "stacktrace",
     "error"
@@ -18,7 +18,7 @@
     "url": "git://github.com/stacktracejs/stack-generator.git"
   },
   "dependencies": {
-    "stackframe": "^1.0.2"
+    "stackframe": "^1.0.3"
   },
   "devDependencies": {
     "colors": "^1.1.2",
