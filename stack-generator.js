@@ -21,10 +21,7 @@
             }
 
             var curr = arguments.callee;
-            while (curr && stack.length < maxStackSize) {
-                if (!curr['arguments']) {
-                  break;
-                }
+            while (curr && stack.length < maxStackSize && curr['arguments']) {
                 // Allow V8 optimizations
                 var args = new Array(curr['arguments'].length);
                 for (var i = 0; i < args.length; ++i) {
