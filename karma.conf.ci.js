@@ -127,7 +127,8 @@ module.exports = function(config) {
             'node_modules/stackframe/dist/stackframe.js',
             'stack-generator.js',
             'spec/spec-helper.js',
-            'spec/*-spec.js'
+            'spec/*-spec.js',
+            { pattern: 'spec/fixtures/**', included: false }
         ],
         exclude: [],
         port: 9876,
