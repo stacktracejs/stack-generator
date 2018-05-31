@@ -69,12 +69,6 @@ module.exports = function(config) {
             platform: 'OS X 10.11',
             version: '10.0'
         },
-        // SauceLabs discontinued support for all versions of Opera:
-        // https://wiki.saucelabs.com/pages/viewpage.action?pageId=70074721
-        // slOpera: {
-        //     base: 'SauceLabs',
-        //     browserName: 'opera'
-        // },
         slEdge14: {
             base: 'SauceLabs',
             browserName: 'microsoftedge',
