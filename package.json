@@ -44,7 +44,7 @@
   },
   "main": "./stack-generator.js",
   "scripts": {
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix stack-generator.js spec/",
     "test": "karma start karma.conf.js --single-run",
     "test-pr": "karma start karma.conf.js --single-run --browsers Firefox,Chrome_Travis",
     "test-ci": "karma start karma.conf.ci.js --single-run",
