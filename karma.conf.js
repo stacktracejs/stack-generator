@@ -14,8 +14,13 @@ module.exports = function (config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        //browsers: ['Firefox', 'ChromeCanary', 'Opera', 'Safari'],
-        browsers: ['PhantomJS2'],
+        customLaunchers: {
+            Chrome_Travis: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        },
+        browsers: ['PhantomJS'],
         singleRun: false
     });
 };

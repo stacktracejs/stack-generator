@@ -1,7 +1,7 @@
 describe('StackGenerator', function() {
     describe('#backtrace', function() {
         afterEach(function () {
-          window.onerror = null;
+            window.onerror = null;
         });
 
         it('should generate backtrace for function declarations', function() {
@@ -94,19 +94,19 @@ describe('StackGenerator', function() {
         });
 
         it('should handle "null" callees', function(done) {
-          var errored = false;
-          window.onerror = function () {
-            try {
-              StackGenerator.backtrace();
-            } catch (e) {
-              errored = true;
-            }
-            expect(errored).toBe(false);
-            done();
-          }
-          var script = document.createElement('script');
-          script.src = '/base/spec/fixtures/a.js';
-          window.document.body.appendChild(script);
+            var errored = false;
+            window.onerror = function () {
+                try {
+                    StackGenerator.backtrace();
+                } catch (e) {
+                    errored = true;
+                }
+                expect(errored).toBe(false);
+                done();
+            };
+            var script = document.createElement('script');
+            script.src = '/base/spec/fixtures/a.js';
+            window.document.body.appendChild(script);
         });
     });
 });

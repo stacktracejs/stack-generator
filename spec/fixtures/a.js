@@ -1,5 +1,5 @@
 function a () {
-  something_bad()
+    something_bad();
 }
 
-a()
+a();
