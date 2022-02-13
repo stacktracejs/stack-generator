@@ -65,9 +65,9 @@ module.exports = function(config) {
             'x-ua-compatible': 'IE=EmulateIE8'
         }
     };
-
     config.set({
         basePath: '',
+        concurrency: 3,
         frameworks: ['jasmine'],
         files: [
             'node_modules/stackframe/dist/stackframe.js',
@@ -78,20 +78,20 @@ module.exports = function(config) {
         ],
         exclude: [],
         port: 9876,
-        colors: true,
+        colors: false,
         logLevel: config.LOG_INFO,
-        autoWatch: true,
+        autoWatch: false,
         browserDisconnectTimeout: 10000,
         browserDisconnectTolerance: 1,
         browserNoActivityTimeout: 240000,
         captureTimeout: 240000,
         sauceLabs: {
             testName: 'stack-generator unit tests',
+            commandTimeout: 600,
+            idleTimeout: 600,
             recordScreenshots: false,
-            connectOptions: {
-                port: 5757,
-                logfile: 'sauce_connect.log'
-            }
+            recordVideo: false,
+            retryLimit: 3
         },
         customLaunchers: customLaunchers,
         browsers: Object.keys(customLaunchers),
