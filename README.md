@@ -1,8 +1,8 @@
 stack-generator
 ===============
 [![Build Status](https://img.shields.io/github/workflow/status/stacktracejs/stack-generator/Continuous%20Integration/master?logo=github&style=flat-square)](https://github.com/stacktracejs/stack-generator/actions?query=workflow%3AContinuous+Integration+branch%3Amaster)
-[![Coverage Status](https://img.shields.io/coveralls/stacktracejs/stack-generator.svg)](https://coveralls.io/r/stacktracejs/stack-generator)
-[![GitHub license](https://img.shields.io/github/license/stacktracejs/stack-generator.svg)](https://opensource.org/licenses/MIT)
+[![Coverage Status](https://img.shields.io/coveralls/stacktracejs/stack-generator.svg?style=flat-square)](https://coveralls.io/r/stacktracejs/stack-generator?branch=master)
+[![GitHub license](https://img.shields.io/github/license/stacktracejs/stack-generator.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![dependencies](https://img.shields.io/badge/dependencies-1-green.svg?style=flat-square)](https://github.com/stacktracejs/stack-generator/releases)
 [![module format](https://img.shields.io/badge/module%20format-umd-lightgrey.svg?style=flat-square&colorB=ff69b4)](https://github.com/stacktracejs/stack-generator/releases)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-lightgrey.svg?style=flat-square&colorB=ff69b4)](http://todogroup.org/opencodeofconduct/#stacktrace.js/me@eriwen.com)
