@@ -7,7 +7,7 @@ stack-generator
 [![module format](https://img.shields.io/badge/module%20format-umd-lightgrey.svg?style=flat-square&colorB=ff69b4)](https://github.com/stacktracejs/stack-generator/releases)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-lightgrey.svg?style=flat-square&colorB=ff69b4)](http://todogroup.org/opencodeofconduct/#stacktrace.js/me@eriwen.com)
 
-Generate artificial backtrace by walking arguments.callee.caller chain. **Works everywhere except [strict-mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)**.
+Generate artificial stacktrace by walking `arguments.callee.caller` chain. **Works everywhere except [strict-mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)**.
 
 ## Usage
 ```
