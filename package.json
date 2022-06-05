@@ -19,7 +19,7 @@
     "url": "git://github.com/stacktracejs/stack-generator.git"
   },
   "dependencies": {
-    "stackframe": "^1.2.1"
+    "stackframe": "^1.3.0"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
