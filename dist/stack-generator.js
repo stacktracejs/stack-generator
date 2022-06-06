@@ -6,7 +6,7 @@
     if (typeof define === 'function' && define.amd) {
         define('stack-generator', ['stackframe'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('stackframe'));
+        module.exports.default = factory(require('stackframe'));
     } else {
         root.StackGenerator = factory(root.StackFrame);
     }
