@@ -22,4 +22,4 @@ declare namespace StackGenerator {
     export function backtrace(opts: StackGeneratorOptions): StackFrame[];
 }
 
-export default StackGenerator;
+export = StackGenerator;
